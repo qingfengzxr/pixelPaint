@@ -90,8 +90,8 @@ class drawPicture():
     def filling(self,event,x,y,flags,param):
       if event == cv2.EVENT_LBUTTONDOWN:
         ix,iy = x,y
-        h = int(iy / 10)
-        w = int(ix / 10)
+        h = int(iy / self.__verticalInterval)
+        w = int(ix / self.__verticalInterval)
         print(w,h)
         print(self.__girdLineRect[h][w])
         if self.__girdLineRect[h][w][4] == 0:
